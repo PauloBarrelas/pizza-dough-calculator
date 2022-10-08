@@ -20,13 +20,23 @@ let width = 0
 let result = 0
 
 //FUNCTION TO GET 66% OF THE RECTANGLE AREA
-function multiply() {
+function rectAreaCalc() {
     result = parseFloat(lengthInput.value) * parseFloat(widthInput.value)
 
     result = result || 0 //Forces the result to be 0 if NaN
 
     resultTxt.innerText = (result * 0.66).toFixed(0)
 }
+
+//FUNCTION TO GET 66% OF THE CIRCLE AREA
+function circleAreaCalc() {
+    radius = parseFloat(radiusInput.value)
+    radius = radius || 0 //Forces the result to be 0 if NaN
+
+    result = ((radius * radius * Math.PI) * 0.66).toFixed(0)
+    resultTxt.innerText = result
+}
+
 
 // TOGGLE BUTTON FOR THE PIZZA SHAPE
 typeToggle.addEventListener('change', function () {
@@ -46,8 +56,8 @@ typeToggle.addEventListener('change', function () {
             widthInput.style.transform = 'translateX(440px)'
         }, 300)
 
-        //Call the multiply() function
-        multiply()
+        //Call the rectAreaCalc() function
+        rectAreaCalc()
 
         //Clears the radius input and result
         radiusInput.value = ''
@@ -69,16 +79,8 @@ typeToggle.addEventListener('change', function () {
         lengthInput.style.transform = 'translateX(0)'
         widthInput.style.transform = 'translateX(0)'
 
-        //Get the value from the radius input and update live
-        radiusInput.addEventListener('input', function () {
-            radius = parseFloat(this.value)
-
-            radius = radius || 0 //Forces the result to be 0 if NaN
-
-            result = ((radius * radius * Math.PI) * 0.66).toFixed(0)
-
-            resultTxt.innerText = result
-        })
+        //Call the circleAreaCalc() function
+        circleAreaCalc()
 
         //Clears the rectangle inputs and result
         lengthInput.value = ''
