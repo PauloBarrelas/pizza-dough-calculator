@@ -44,7 +44,7 @@ p {
 h1 {
     margin: 0 1rem;
     color: var(--clr-accent);
-    font-size: 2.3rem;
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
 }
 
 
@@ -144,7 +144,9 @@ input:checked+.slider:before {
 .rectangle {
     position: absolute;
     top: 30px;
-    left: -335px;
+    left: 0;
+    right: 0;
+    transform: translateX(-440px);
 }
 
 .circle {
@@ -152,8 +154,6 @@ input:checked+.slider:before {
     left: 0;
     right: 0;
 }
-
-
 
 /** INPUTS **/
 
@@ -197,12 +197,12 @@ input[type=number] {
 
 #rectangleL-txt {
     top: 113px;
-    left: 197px;
+    left: 55%;
 }
 
 #rectangleW-txt {
     top: 36px;
-    left: 49px;
+    left: 29%;
 }
 
 

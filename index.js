@@ -43,6 +43,7 @@ typeToggle.addEventListener('change', function () {
     if (this.checked) {
         squareShape.style.borderColor = 'var(--clr-accent)'
         circleShape.style.borderColor = 'var(--clr-bg1)'
+
         circleContent.style.transform = 'translateX(405px)'
         radiusInput.style.transform = 'translateX(405px)'
 
