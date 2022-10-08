@@ -1,0 +1,259 @@
+:root {
+    --clr-bg1: #444;
+    --clr-bg2: #1E1E1E;
+    --clr-bg3: #141414;
+    --clr-accent: #9366F2;
+    --transition: .4s;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    background-color: var(--clr-bg1);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    background-color: var(--clr-bg2);
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--clr-bg3);
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--clr-accent);
+    font-size: 37px;
+}
+
+
+
+/** Controls **/
+
+.controls-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#circle-option {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--clr-accent);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+#square-option {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--clr-bg1);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.system {
+    font-size: 1.68rem;
+    display: inline-block;
+    width: 50px;
+}
+
+#metric {
+    color: var(--clr-accent);
+    transition: var(--transition);
+}
+
+#imperial {
+    color: var(--clr-bg1);
+    transition: var(--transition);
+}
+
+/** toggle buttons **/
+.toggle {
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 30px;
+
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-bg2);
+    border: 2px solid var(--clr-bg1);
+    border-radius: 30px;
+
+}
+
+.slider:before {
+    position: absolute;
+    transform: translateX(0px);
+    content: "";
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--clr-bg2);
+    border-radius: 30px;
+    background-color: var(--clr-accent);
+    transition: .4s;
+}
+
+input:checked+.slider:before {
+    transform: translateX(34px);
+    transition: .4s;
+}
+
+/** SHAPE TYPES **/
+
+.shape {
+    margin: 3rem 0;
+    overflow: hidden;
+    height: 260px;
+    text-align: center;
+    position: relative;
+}
+
+
+.rectangle {
+    position: absolute;
+    top: 30px;
+    left: -335px;
+}
+
+.circle {
+    position: absolute;
+    left: 140px;
+}
+
+
+
+/** INPUTS **/
+
+/** Make number input look like text input **/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#circle,
+#rectangle,
+#radius-txt,
+#rectangleL-txt,
+#rectangleW-txt {
+    transition: var(--transition);
+}
+
+#radius-txt,
+#rectangleL-txt,
+#rectangleW-txt {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    width: 4rem;
+    background-color: var(--clr-bg1);
+    color: var(--clr-bg3);
+    border: none;
+    border-radius: 40px;
+    padding: .3rem 1rem;
+}
+
+#radius-txt {
+    top: 83px;
+    left: 140px;
+}
+
+#rectangleL-txt {
+    top: 113px;
+    left: 197px;
+}
+
+#rectangleW-txt {
+    top: 36px;
+    left: 49px;
+}
+
+
+/** FOOTER **/
+
+.footer {
+    background-color: var(--clr-bg3);
+    padding: 0.5rem 0;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
+
+#result {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--clr-accent);
+
+}
+
+#units {
+    font-size: 2rem;
+    color: var(--clr-bg1);
+}
+
+/** social section **/
+
+#footer {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icons-wrapper {
+    display: flex;
+}
+
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 1.8rem;
+    margin-left: 2.1rem;
+    transition: all 0.7s ease;
+    opacity: 75%;
+}
+
+.social:hover {
+    opacity: 50%;
+}
+
+.copyright {
+    display: inline-block;
+    margin-top: .5rem;
+    color: var(--clr-bg2);
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple web app developed by Paulo Barrelas, consisting a pizza dough calculator. Round and square pizza shapes are accepted"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pizza Dough Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+
+            <div class="header">
+                <h1>Pizza Dough Calculator</h1>
+            </div>
+
+            <!-- CONTROLS -->
+
+            <div class="controls-wrapper">
+
+                <div id="circle-option"></div>
+
+                <label for="type-toggle" class="toggle">
+                    <input type="checkbox" id="type-toggle">
+                    <span class="slider"></span>
+                </label>
+
+                <div id="square-option"></div>
+
+            </div><!-- /controls-wrapper-->
+            <!--
+            <div class="controls-wrapper">
+
+                <p class="system" id="metric">cm</p>
+
+                <label for="system-toggle" class="toggle">
+                    <input type="checkbox" id="system-toggle">
+                    <span class="slider"></span>
+                </label>
+
+                <p class="system" id="imperial">in</p>
+
+            </div><!-- /controls-wrapper -->
+            
+            <!-- SHAPE -->
+
+            <div class="shape">
+
+                <div class="circle">
+                    <img src="/img/Circle.svg" alt="pizza circle shape" id="circle">
+                    <input type="number" id="radius-txt" placeholder="Radius" min="0">
+                </div>
+
+                <div class="rectangle">
+                    <img src="/img/Rectangle.svg" alt="pizza revtangle shape" id="rectangle">
+                    <input type="number" id="rectangleL-txt" placeholder="Length" min="0" oninput="multiply()">
+                    <input type="number" id="rectangleW-txt" placeholder="Width" min="0" oninput="multiply()">
+                </div>
+
+            </div><!-- /shape -->
+
+            <div class="footer">
+                <p >
+                    <span id="result">0</span><span id="units">gr</span>
+                </p>
+            </div>
+
+        </div><!-- /card -->
+    </div> <!-- /container-->
+
+    <footer class="container" id="footer">
+
+        <p class="copyright">©2022 Paulo Barrelas</p>
+
+        <div class="social-icons-wrapper">
+            <a href="https://github.com/PauloBarrelas" target="_blank">
+                <img class="social" src="/img/github-round.svg" alt="github icon" id="social-icon">
+            </a>
+
+            <a href="https://www.linkedin.com/in/paulo-barrelas-99a06a2/" target="_blank">
+                <img class="social" src="/img/linkedin-round.svg" alt="linkedin icon" id="social-icon">
+            </a>
+            
+            <a href="https://twitter.com/paulo_barrelas" target="_blank">
+                <img class="social" src="/img/twitter-simple.svg" alt="twitter icon" id="social-icon">
+            </a>
+        </div>
+    
+    
+    
+</footer>
+    <script src="/index.js"></script>
+</body>
+</html>
