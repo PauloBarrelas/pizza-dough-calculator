@@ -33,7 +33,7 @@ p {
 
 .header {
     width: 100%;
-    height: 80px;
+    padding: 1rem 0;
     background-color: var(--clr-bg3);
     border-radius: 20px 20px 0px 0px;
     display: flex;
@@ -42,9 +42,9 @@ p {
 }
 
 h1 {
-    margin: 0;
+    margin: 0 1rem;
     color: var(--clr-accent);
-    font-size: 37px;
+    font-size: 2.3rem;
 }
 
 
