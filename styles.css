@@ -170,13 +170,13 @@ input[type=number] {
 
 #circle,
 #rectangle,
-#radius-txt,
+#diameter-txt,
 #rectangleL-txt,
 #rectangleW-txt {
     transition: var(--transition);
 }
 
-#radius-txt,
+#diameter-txt,
 #rectangleL-txt,
 #rectangleW-txt {
     position: absolute;
@@ -190,9 +190,10 @@ input[type=number] {
     padding: .3rem 1rem;
 }
 
-#radius-txt {
+#diameter-txt {
+    width: 5rem;
     top: 83px;
-    left: 50%;
+    left: 41%;
 }
 
 #rectangleL-txt {

@@ -8,13 +8,13 @@ const systemToggle = document.getElementById('system-toggle')
 const metricSystem = document.getElementById('metric')
 const imperialSystem = document.getElementById('imperial')
 
-const radiusInput = document.getElementById('radius-txt')
+const diameterInput = document.getElementById('diameter-txt')
 const lengthInput = document.getElementById('rectangleL-txt')
 const widthInput = document.getElementById('rectangleW-txt')
 const resultTxt = document.getElementById('result')
 const units = document.getElementById('units')
 
-let radius = 0
+let diameter = 0
 let length = 0
 let width = 0
 let result = 0
@@ -30,9 +30,9 @@ function rectAreaCalc() {
 
 //FUNCTION TO GET 66% OF THE CIRCLE AREA
 function circleAreaCalc() {
-    radius = parseFloat(radiusInput.value)
-    radius = radius || 0 //Forces the result to be 0 if NaN
-
+    diameter = parseFloat(diameterInput.value)
+    diameter = diameter || 0 //Forces the result to be 0 if NaN
+    let radius = diameter / 2
     result = ((radius * radius * Math.PI) * 0.66).toFixed(0)
     resultTxt.innerText = result
 }
@@ -45,7 +45,7 @@ typeToggle.addEventListener('change', function () {
         circleShape.style.borderColor = 'var(--clr-bg1)'
 
         circleContent.style.transform = 'translateX(405px)'
-        radiusInput.style.transform = 'translateX(405px)'
+        diameterInput.style.transform = 'translateX(405px)'
 
         setTimeout(function () {
             rectangleContent.style.transform = 'translateX(440px)'
@@ -60,8 +60,8 @@ typeToggle.addEventListener('change', function () {
         //Call the rectAreaCalc() function
         rectAreaCalc()
 
-        //Clears the radius input and result
-        radiusInput.value = ''
+        //Clears the diameter input and result
+        diameterInput.value = ''
         resultTxt.innerText = 0
 
     } else {
@@ -73,7 +73,7 @@ typeToggle.addEventListener('change', function () {
             circleContent.style.transform = 'translateX(0)'
         }, 100)
         setTimeout(function () {
-            radiusInput.style.transform = 'translateX(0)'
+            diameterInput.style.transform = 'translateX(0)'
         }, 200)
 
         rectangleContent.style.transform = 'translateX(0)'
